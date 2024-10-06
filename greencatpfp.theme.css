@@ -1,5 +1,25 @@
-.avatar {
-    background-image: url('https://s1.gifyu.com/images/SB9tw.jpg') !important;
-    background-size: cover !important;
-    content: '';
+/* Force a specific PFP for all users */
+img[src*="cdn.discordapp.com/avatars"] {
+    content: url('https://s1.gifyu.com/images/SB9tw.jpg') !important;
+    width: 32px;  /* Adjust size as needed */
+    height: 32px; /* Adjust size as needed */
+    border-radius: 50%; /* Ensures the image is circular */
+}
+
+/* Override for user profile pop-up */
+.userProfile .avatar,
+.userProfile .avatar img {
+    content: url('https://s1.gifyu.com/images/SB9tw.jpg') !important;
+    width: 64px;  /* Adjust size for profile popouts */
+    height: 64px; /* Adjust size for profile popouts */
+    border-radius: 50%; /* Ensures the image is circular */
+}
+
+/* Override for DM user avatars */
+.guild .member .avatar,
+.dm .avatar {
+    content: url('https://s1.gifyu.com/images/SB9tw.jpg') !important;
+    width: 32px;  /* Adjust size as needed */
+    height: 32px; /* Adjust size as needed */
+    border-radius: 50%; /* Ensures the image is circular */
 }
